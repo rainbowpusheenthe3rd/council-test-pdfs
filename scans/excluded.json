@@ -1,0 +1,614 @@
+[
+ {
+  "council": "bathnes",
+  "file": "pdfs\\_unsafe\\bathnes\\c321ec63c2_Matter_205_20Written_20Statement_20-_20Crossman_20Aquisitions.pdf",
+  "bytes": 3304412,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "bradford",
+  "file": "pdfs\\_unsafe\\bradford\\3ad3d83108_anti-povertystrategy-2022-2027.pdf",
+  "bytes": 5014633,
+  "raw_markers": "AA JS OpenAction",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "bradford",
+  "file": "pdfs\\_unsafe\\bradford\\646584a6a1_bradford-homelessness-strategy-2020-to-2025.pdf",
+  "bytes": 4717136,
+  "raw_markers": "JS OpenAction",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "cheltenham",
+  "file": "pdfs\\_unsafe\\cheltenham\\1ce6a3a9d5_cbc-statement-of-accounts-2024-25.pdf",
+  "bytes": 3134640,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "cheltenham",
+  "file": "pdfs\\_unsafe\\cheltenham\\5891866909_climate-emergency-action-plan-pathway.pdf",
+  "bytes": 5194040,
+  "raw_markers": "",
+  "active": "EmbeddedFile",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "cheltenham",
+  "file": "pdfs\\_unsafe\\cheltenham\\7cff90c4db_cheltenham_borough_council_audit_findings_report_31_march_2022_021023.pdf",
+  "bytes": 7107258,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "durham",
+  "file": "pdfs\\_unsafe\\durham\\eca7c36e81_CouncilPlan2024-2029.pdf",
+  "bytes": 5474966,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "lambeth",
+  "file": "pdfs\\_unsafe\\lambeth\\1cfda2f972_Appendix_201_20Housing_20Stock_20and_20Stressors_20Report_2C_20Metastreet_202022.pdf",
+  "bytes": 4194433,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "lambeth",
+  "file": "pdfs\\_unsafe\\lambeth\\2dc7b708c9_SR00149561_20Civic_20Awards_20Programme_202026_20ACC.pdf",
+  "bytes": 5621922,
+  "raw_markers": "",
+  "active": "EmbeddedFile",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "lambeth",
+  "file": "pdfs\\_unsafe\\lambeth\\317a3aebeb_pl_SA_DRLLP_PSV_2020-accessible.pdf",
+  "bytes": 4613560,
+  "raw_markers": "JS",
+  "active": "EmbeddedFile",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "lambeth",
+  "file": "pdfs\\_unsafe\\lambeth\\82880bdaa4_pl_SA_DRLLP_PSV_2020.pdf",
+  "bytes": 4413556,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "lambeth",
+  "file": "pdfs\\_unsafe\\lambeth\\ac4771077c_Appendix_205_20Map_20of_20Proposed_20Selective_20Licensing_20Designation_202_20..pdf",
+  "bytes": 7820713,
+  "raw_markers": "AA JS OpenAction",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "lancashire",
+  "file": "pdfs\\_unsafe\\lancashire\\80afc63ca6_cd704-the-wyre-local-plan-2011-2031.pdf",
+  "bytes": 6535861,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\147c3af06a_147c3af06ad5a6899044cd61e3b7d1d3ebcdef0c075ba6e8d2662f48fad40b47.pdf",
+  "bytes": 3257381,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\17e2b4e762_map383-2493.pdf",
+  "bytes": 3496044,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\224da4b3f5_224da4b3f5872f45b067a3c3ca53c55a05a764beeb683e1f30c7d0ece73bb5ae.pdf",
+  "bytes": 6363076,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\349c94047a_349c94047a8935aec442b1d2c204a7d8dc6d1e09c9548cf7465cf682c41c5daf.pdf",
+  "bytes": 5006885,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\37f374eaae_37f374eaaee8f3b4438dee16f6f575c672b7e903e105917acf5b1815654695c1.pdf",
+  "bytes": 5381684,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\3e92242ea8_map383-2428.pdf",
+  "bytes": 3611276,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\3f7ac79cc0_3f7ac79cc04134c086b0ef4e8aba13d65db554ee53566b34fbf26667f5d82d88.pdf",
+  "bytes": 4544669,
+  "raw_markers": "JS OpenAction",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\46f96232a0_map383-2369.pdf",
+  "bytes": 3447844,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\49b228d531_49b228d5319b6c96170e7f1572a31bd126e6b2df8e1b544de0475570eb2fdc68.pdf",
+  "bytes": 4932223,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\4ea0afcac6_4ea0afcac6a68ec12f46384fb58b1cba1ac794fd243c226af81a2d893069d183.pdf",
+  "bytes": 8799852,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\50a6d64ada_50a6d64ada5dd98ac1c69051688c5a567579c896bdb6bfa3d9f83dedfad6eaf7.pdf",
+  "bytes": 5409416,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\689569bd59_689569bd59878f008535487f11148bfa54f9ab229e9ec61b67c433e2565bdf7d.pdf",
+  "bytes": 4950253,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\6d1504b4ba_wards_202025_harewood_20ward.pdf",
+  "bytes": 3893751,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\ab6976aa6c_ab6976aa6cd9dcc21a07a8e36f5ffd57bae95c695ef84b514ee55cf14b56fdae.pdf",
+  "bytes": 3639101,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\ba33527bae_ba33527bae1d6b99fc622afadfc9c477536479544033d31cf193893cacc691b1.pdf",
+  "bytes": 5226206,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\c852b3711a_c852b3711ae61f31776f01b309b301af32b79ae68415d4f0f81210189e774b17.pdf",
+  "bytes": 7152746,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\cdf026b0bf_map383-4063_primary_.pdf",
+  "bytes": 3990446,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\da5771cf98_da5771cf980462139b90495da22149fba8df846bbe4d9f5cd4201df8a52932ab.pdf",
+  "bytes": 3448264,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\e121cde4f5_e121cde4f52e0ed8198888e93e00f641b185672b8023f61f2fab5c7cd5ac454f.pdf",
+  "bytes": 4074975,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\e28061038c_e28061038c3f9212ade09f74d013d712ca8f34227707d1b5e612c603e2c6cdca.pdf",
+  "bytes": 4708120,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\f3e9e886d1_map383-2494.pdf",
+  "bytes": 3547172,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\f86efcc542_f86efcc542eb39c2bdb2fbd513d04061cd90dd8425104bc70df5a5d5a3b39da0.pdf",
+  "bytes": 4040194,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leeds",
+  "file": "pdfs\\_unsafe\\leeds\\fc505ea56d_map383-3045.pdf",
+  "bytes": 2689449,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leicester",
+  "file": "pdfs\\_unsafe\\leicester\\b9cccf51cf_the-big-plan-report-2020-2023.pdf",
+  "bytes": 2078416,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "leicester",
+  "file": "pdfs\\_unsafe\\leicester\\c51ab7ac6e_Sustainability_20appraisal_20of_20the_20Reg_2019_20Leicester_20Local_20Plan_20-_.pdf",
+  "bytes": 3743177,
+  "raw_markers": "",
+  "active": "EmbeddedFile",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "northumberland",
+  "file": "pdfs\\_unsafe\\northumberland\\2d971f7847_Landscape-Character-Part-A-Figure-6.pdf",
+  "bytes": 6916538,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "northumberland",
+  "file": "pdfs\\_unsafe\\northumberland\\5732e3d59e_Landscape-Character-Part-A-Figure-5.pdf",
+  "bytes": 7059158,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "northumberland",
+  "file": "pdfs\\_unsafe\\northumberland\\5e34894e59_Key-Land-Use-Impact-Study-Part-C.pdf",
+  "bytes": 9735839,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "northumberland",
+  "file": "pdfs\\_unsafe\\northumberland\\5e7a51c037_Allendale-LHNS-Final-Report-March-2014.pdf",
+  "bytes": 1630307,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "northumberland",
+  "file": "pdfs\\_unsafe\\northumberland\\a3d3502dd3_Landscape-Character-Part-A-Figure-2.pdf",
+  "bytes": 7718339,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "northumberland",
+  "file": "pdfs\\_unsafe\\northumberland\\b2484f918c_Northumberland-Coastal-Parishes-Housing-Need-Survey-July-2023.pdf",
+  "bytes": 4186977,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "northumberland",
+  "file": "pdfs\\_unsafe\\northumberland\\b48f59f58f_Landscape-Character-Part-A-Figure-1.pdf",
+  "bytes": 6935209,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "northumberland",
+  "file": "pdfs\\_unsafe\\northumberland\\c805e92590_Landscape-Character-Part-A-Figure-7.pdf",
+  "bytes": 7380921,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "northumberland",
+  "file": "pdfs\\_unsafe\\northumberland\\ca965a460e_Landscape-Character-Part-A-Figure-3.pdf",
+  "bytes": 7112054,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "northyorks",
+  "file": "pdfs\\_unsafe\\northyorks\\ef5ae6694a_Preparation_20for_20adulthood_20guide_20May_202025.pdf",
+  "bytes": 4002328,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "nottinghamshire",
+  "file": "pdfs\\_unsafe\\nottinghamshire\\262911c3dd_youthjusticestrategicplan.pdf",
+  "bytes": 6604527,
+  "raw_markers": "JS OpenAction",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "nottinghamshire",
+  "file": "pdfs\\_unsafe\\nottinghamshire\\72b3e6480d_youthjusticestrategicplan2025.pdf",
+  "bytes": 7315426,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "nottinghamshire",
+  "file": "pdfs\\_unsafe\\nottinghamshire\\bdc81f07ab_nottinghamshireyouthjusticestrategy2020-23.pdf",
+  "bytes": 2382330,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "staffordshire",
+  "file": "pdfs\\_unsafe\\staffordshire\\2ed5314e5f_Director_20of_20Public_20Health_20annual_20report_202026.pdf",
+  "bytes": 6737468,
+  "raw_markers": "JS OpenAction",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "staffordshire",
+  "file": "pdfs\\_unsafe\\staffordshire\\93ed08c8db_PNA-2025-FINAL.pdf",
+  "bytes": 8709737,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "swindon",
+  "file": "pdfs\\_unsafe\\swindon\\060ff459ea_0702_carbon_inventory_draft_2025.pdf",
+  "bytes": 4587626,
+  "raw_markers": "",
+  "active": "EmbeddedFile",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "swindon",
+  "file": "pdfs\\_unsafe\\swindon\\0899ce5edc_audit_findings_report_-_202223.pdf",
+  "bytes": 7765109,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "swindon",
+  "file": "pdfs\\_unsafe\\swindon\\283dc6453e_figure_014d_functional_floodplain_detailed_level_south_east.pdf",
+  "bytes": 4680973,
+  "raw_markers": "OpenAction",
+  "active": "EmbeddedFile",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "swindon",
+  "file": "pdfs\\_unsafe\\swindon\\4050b5b10f_figure_080_-_flooding_from_surface_water.pdf",
+  "bytes": 4975232,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "swindon",
+  "file": "pdfs\\_unsafe\\swindon\\40bf188dac_0804_heritage_impact_assessment_2026.pdf",
+  "bytes": 3759758,
+  "raw_markers": "AA JS",
+  "active": "EmbeddedFile",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "swindon",
+  "file": "pdfs\\_unsafe\\swindon\\7dab2ecbcb_figure_012_modelled_flood_extents_present_day.pdf",
+  "bytes": 5055932,
+  "raw_markers": "OpenAction",
+  "active": "EmbeddedFile",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "swindon",
+  "file": "pdfs\\_unsafe\\swindon\\8b9c40f389_figure_004c_river_cole_catchment_and_management_areas.pdf",
+  "bytes": 5679700,
+  "raw_markers": "OpenAction",
+  "active": "EmbeddedFile",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "swindon",
+  "file": "pdfs\\_unsafe\\swindon\\a493819b89_figure_09_-_flooding_from_reservoirs.pdf",
+  "bytes": 4508791,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "swindon",
+  "file": "pdfs\\_unsafe\\swindon\\af18dfcad4_figure_008b_flood_zones_detailed_level_middle.pdf",
+  "bytes": 7000712,
+  "raw_markers": "OpenAction",
+  "active": "EmbeddedFile",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "swindon",
+  "file": "pdfs\\_unsafe\\swindon\\b52bbb98c6_figure_013_modelled_flood_extents_climate_change.pdf",
+  "bytes": 4951721,
+  "raw_markers": "OpenAction",
+  "active": "EmbeddedFile",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "swindon",
+  "file": "pdfs\\_unsafe\\swindon\\fea317b9f8_nev_southern_connector_road_plan.pdf",
+  "bytes": 6673333,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "swindon",
+  "file": "pdfs\\_unsafe\\swindon\\ff728b67f9_figure_062_-_modelled_fluvial_flood_risk_thames.pdf",
+  "bytes": 5843067,
+  "raw_markers": "AA JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "westsussex",
+  "file": "pdfs\\_unsafe\\westsussex\\315fe82273_residential-financial-assessments_easyread.pdf",
+  "bytes": 9776496,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "westsussex",
+  "file": "pdfs\\_unsafe\\westsussex\\3c859fbe0e_mental_health_act_easy_read.pdf",
+  "bytes": 8035115,
+  "raw_markers": "JS",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ },
+ {
+  "council": "york",
+  "file": "pdfs\\_unsafe\\york\\932d71e0ba_york-physical-activity-and-sport-strategy-2022-to-2032.pdf",
+  "bytes": 4870233,
+  "raw_markers": "JS OpenAction",
+  "active": "",
+  "webmail": 0,
+  "verdict": "excluded: active content"
+ }
+]
