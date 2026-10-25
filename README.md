@@ -3,13 +3,23 @@
 Public PDFs from UK council websites, collected 23 October 2026, for testing PDF tooling (pypdf, docling,
 Pillow…). **This is a temporary repo.**
 
-| Release asset | Files | Councils | Sizes | Median |
-|---|---|---|---|---|
-| [`council_pdfs_1-10MB.zip`](../../releases/download/v1/council_pdfs_1-10MB.zip) | 196 | 24 | 1–10 MB, log-normal, weighted towards larger files | 4.2 MB |
-| [`council_pdfs_100KB-1MB.zip`](../../releases/download/v1/council_pdfs_100KB-1MB.zip) | 50 | 36 | 100 KB–1 MB, even across log bins (a sanity set) | 0.35 MB |
+Download from the [v2 release](../../releases/tag/v2). Every zip is at most 200 MB and opens on its own: the
+parts are separate zips, not a split archive, so download only the parts you need.
 
-Each zip contains `pdfs/<council>/<sha256-prefix>_<name>.pdf`, plus `manifest.csv` and `safety.csv`. The same
-two CSVs are in this repo under [`manifests/`](manifests/) and [`scans/`](scans/).
+| Release asset | Files | Size | What |
+|---|---|---|---|
+| [`council_pdfs_1-10MB_part1of5.zip`](../../releases/download/v2/council_pdfs_1-10MB_part1of5.zip) | 46 | 197 MB | Council PDFs of 1–10 MB (196 across five parts, 24 councils, median 4.2 MB) |
+| [`council_pdfs_1-10MB_part2of5.zip`](../../releases/download/v2/council_pdfs_1-10MB_part2of5.zip) | 39 | 200 MB | ″ |
+| [`council_pdfs_1-10MB_part3of5.zip`](../../releases/download/v2/council_pdfs_1-10MB_part3of5.zip) | 39 | 200 MB | ″ |
+| [`council_pdfs_1-10MB_part4of5.zip`](../../releases/download/v2/council_pdfs_1-10MB_part4of5.zip) | 46 | 195 MB | ″ |
+| [`council_pdfs_1-10MB_part5of5.zip`](../../releases/download/v2/council_pdfs_1-10MB_part5of5.zip) | 26 | 105 MB | ″ |
+| [`council_pdfs_100KB-1MB.zip`](../../releases/download/v2/council_pdfs_100KB-1MB.zip) | 50 | 20 MB | Council PDFs of 100 KB–1 MB, even across log bins (a sanity set, 36 councils) |
+| [`reference_pdfs_pypdf_docling.zip`](../../releases/download/v2/reference_pdfs_pypdf_docling.zip) | 142 | 159 MB | The files pypdf and docling test themselves against ([below](#pypdf-and-docling-reference-set)) |
+
+The council zips contain `pdfs/<council>/<sha256-prefix>_<name>.pdf`, plus `manifest.csv` and `safety.csv`.
+Parts are filled in alphabetical order by council, so a council can span two parts. Each part has the full
+manifest. The CSVs are also in this repo under [`manifests/`](manifests/) and [`scans/`](scans/). v1 has the
+same council files as one 896 MB zip.
 
 ---
 
@@ -48,6 +58,23 @@ Buckinghamshire, Devon, Worcestershire and Lancashire.
 Ten files in each of five log-spaced bins (100–158–251–398–631–1000 KB), with at most 4 per council, from 36
 councils. Median 0.35 MB, median 9 pages. 2 have little or no text layer; all 50 open in pypdf.
 
+### pypdf and docling reference set (142 files)
+
+The files each project's own test suite runs against, fetched 25 October 2026 from `main`. They're in
+`pdfs/<source>/…`, and [`manifests/reference.csv`](manifests/reference.csv) lists each file's upstream URL,
+sha256 and the same pypdf properties as the council manifests.
+
+| Folder | Files | Size | Source | Licence |
+|---|---|---|---|---|
+| `pypdf_sample-files/` | 35 | 14 MB | [py-pdf/sample-files](https://github.com/py-pdf/sample-files), the submodule pypdf's `samples`-marked tests use. Includes upstream `files.json`, which describes each file | CC-BY-SA-4.0 (`LICENSE` included) |
+| `pypdf_downloads/` | 67 | 88 MB | Every entry in pypdf's [`tests/example_files.yaml`](https://github.com/py-pdf/pypdf/blob/main/tests/example_files.yaml), which is what `download_test_pdfs()` fetches. Mostly PDFs attached to pypdf issues; 12 are the PNG, TIFF and raw-stream files that pypdf's image tests compare against | Various: check each file's source URL |
+| `docling/` | 40 | 57 MB | The PDFs under docling's [`tests/data/`](https://github.com/docling-project/docling/tree/main/tests/data) (`pdf/`, `pdf_password/`, `ocr/`, `odf/`). `latex/` was left out because its PDFs are figure assets inside LaTeX sources, not test inputs | MIT (`LICENSE` included) |
+
+Of the 130 PDFs, **9 don't open in pypdf** and 4 are encrypted. Upstream broke some on purpose: truncated
+files, bad xrefs and a PNG named `.pdf`. 38 have little or no text layer. These are test fixtures, so the
+council active-content filter was **not** applied: some have attachments, forms or JavaScript by design.
+Defender found no threats.
+
 ---
 
 ## Collection methodology
@@ -80,7 +107,8 @@ councils. Median 0.35 MB, median 9 pages. 2 have little or no text layer; all 50
    from those logs, so no new discovery was needed, and downloaded under the same rules.
 
 The scripts are in [`scripts/`](scripts/): `dataset_crawl.py` (shared robots, TLS, size-quota code and the page
-crawl), `pdf_harvest.py`, `small_pdfs.py`, `pdf_safety.py`, `pdf_manifest.py` and `publish_pdfs.py`.
+crawl), `pdf_harvest.py`, `small_pdfs.py`, `pdf_safety.py`, `pdf_manifest.py`, `reference_pdfs.py` (the pypdf
+and docling set) and `publish_pdfs.py` (`--v2` builds the 200 MB parts).
 
 ---
 
@@ -96,7 +124,7 @@ Every published file passed every check below. The results for the published fil
 | **Residents' personal data** | Text from up to 40 pages per file, searched for personal webmail addresses (gmail, hotmail, yahoo, outlook, btinternet and others). 3 or more would exclude a file, as a sign of objections or consultation responses | 0 files excluded. **No published file contains any personal webmail address** |
 | **Benign actions kept** | `/OpenAction` (17 files) and `/AA` (24) without JavaScript or Launch: these set the opening view or zoom | Kept |
 | **Integrity** | `%PDF` header, sha256 per file in the manifest | All pass |
-| **Antivirus** | Windows Defender (`MpCmdRun -Scan -ScanType 3`) | **Not yet run.** It was blocked by a tool permission during collection. Until it's run, treat the files like any downloaded document |
+| **Antivirus** | Windows Defender (`MpCmdRun -Scan -ScanType 3`) | Run 25 October 2026 on both council sets, including the excluded files, and on the reference set: **no threats found** |
 
 Excluding files reshaped the size distribution, so after each round of exclusions the bins were topped up
 and the new files checked again. It took four rounds.
