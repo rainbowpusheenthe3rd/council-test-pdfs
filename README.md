@@ -3,23 +3,36 @@
 Public PDFs from UK council websites, collected 23 October 2026, for testing PDF tooling (pypdf, docling,
 Pillow…). **This is a temporary repo.**
 
-Download from the [v2 release](../../releases/tag/v2). Every zip is at most 200 MB and opens on its own: the
-parts are separate zips, not a split archive, so download only the parts you need.
+## Download everything
 
-| Release asset | Files | Size | What |
-|---|---|---|---|
-| [`council_pdfs_1-10MB_part1of5.zip`](../../releases/download/v2/council_pdfs_1-10MB_part1of5.zip) | 46 | 197 MB | Council PDFs of 1–10 MB (196 across five parts, 24 councils, median 4.2 MB) |
-| [`council_pdfs_1-10MB_part2of5.zip`](../../releases/download/v2/council_pdfs_1-10MB_part2of5.zip) | 39 | 200 MB | ″ |
-| [`council_pdfs_1-10MB_part3of5.zip`](../../releases/download/v2/council_pdfs_1-10MB_part3of5.zip) | 39 | 200 MB | ″ |
-| [`council_pdfs_1-10MB_part4of5.zip`](../../releases/download/v2/council_pdfs_1-10MB_part4of5.zip) | 46 | 195 MB | ″ |
-| [`council_pdfs_1-10MB_part5of5.zip`](../../releases/download/v2/council_pdfs_1-10MB_part5of5.zip) | 26 | 105 MB | ″ |
-| [`council_pdfs_100KB-1MB.zip`](../../releases/download/v2/council_pdfs_100KB-1MB.zip) | 50 | 20 MB | Council PDFs of 100 KB–1 MB, even across log bins (a sanity set, 36 councils) |
-| [`reference_pdfs_pypdf_docling.zip`](../../releases/download/v2/reference_pdfs_pypdf_docling.zip) | 142 | 159 MB | The files pypdf and docling test themselves against ([below](#pypdf-and-docling-reference-set)) |
+The [v3 release](../../releases/tag/v3) has 24 zips, each at most 50 MB. Each one is a self-contained zip,
+not a piece of a split archive. Download them all into one folder and extract them all there:
 
-The council zips contain `pdfs/<council>/<sha256-prefix>_<name>.pdf`, plus `manifest.csv` and `safety.csv`.
-Parts are filled in alphabetical order by council, so a council can span two parts. Each part has the full
-manifest. The CSVs are also in this repo under [`manifests/`](manifests/) and [`scans/`](scans/). v1 has the
-same council files as one 896 MB zip.
+```bash
+gh release download v3 -R rainbowpusheenthe3rd/council-test-pdfs -D council-test-pdfs -p "*.zip"
+cd council-test-pdfs && for z in *.zip; do unzip -oq "$z"; done
+```
+
+```powershell
+gh release download v3 -R rainbowpusheenthe3rd/council-test-pdfs -D council-test-pdfs -p "*.zip"
+Get-ChildItem council-test-pdfs\*.zip | ForEach-Object { Expand-Archive $_ -DestinationPath council-test-pdfs -Force }
+```
+
+The repo is public, so if `gh` isn't installed you can list the asset URLs at
+`https://api.github.com/repos/rainbowpusheenthe3rd/council-test-pdfs/releases/tags/v3` and fetch each one.
+
+Each set extracts into its own folder, so the parts merge cleanly:
+
+| Folder | Zips | Files | Size | What |
+|---|---|---|---|---|
+| `council_pdfs_1-10MB/` | `council_pdfs_1-10MB_part01of19` … `part19of19` | 196 | 896 MB | Council PDFs of 1–10 MB (24 councils, log-normal sizes, median 4.2 MB) |
+| `council_pdfs_100KB-1MB/` | `council_pdfs_100KB-1MB` | 50 | 20 MB | Council PDFs of 100 KB–1 MB, even across log bins (a sanity set, 36 councils) |
+| `reference_pdfs_pypdf_docling/` | `reference_pdfs_pypdf_docling_part01of04` … `part04of04` | 142 | 159 MB | The files pypdf and docling test themselves against ([below](#pypdf-and-docling-reference-set)) |
+
+Each folder holds `pdfs/<council or source>/…` plus `manifest.csv`. The council folders also have
+`safety.csv`. Every part carries the full manifest, so overwriting it on extract is harmless. The CSVs are
+also in this repo under [`manifests/`](manifests/) and [`scans/`](scans/). Older releases have the same files
+in bigger zips: v1 as one 896 MB zip, v2 in parts of 200 MB.
 
 ---
 
@@ -108,7 +121,7 @@ Defender found no threats.
 
 The scripts are in [`scripts/`](scripts/): `dataset_crawl.py` (shared robots, TLS, size-quota code and the page
 crawl), `pdf_harvest.py`, `small_pdfs.py`, `pdf_safety.py`, `pdf_manifest.py`, `reference_pdfs.py` (the pypdf
-and docling set) and `publish_pdfs.py` (`--v2` builds the 200 MB parts).
+and docling set) and `publish_pdfs.py` (`--parts` builds the 50 MB parts).
 
 ---
 

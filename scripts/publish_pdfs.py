@@ -1,7 +1,7 @@
 """Zip the checked PDF test sets and publish them as release assets on a public GitHub repo.
 
     python publish_pdfs.py                # zips → dataset/release/, then creates the repo and the release
-    python publish_pdfs.py --v2           # parts of ≤200 MB + the pypdf/docling reference set → release v2
+    python publish_pdfs.py --parts        # every set in parts of ≤50 MB → release v3
 
 Each zip carries its manifest (pdfs.csv / pdfs_small.csv) and the safety report. Files are stored, not
 deflated: PDFs are already compressed. The repo gets only a README; the zips are release assets (git
@@ -48,12 +48,13 @@ page before reusing one beyond testing.
 """
 
 
-PART_MB = 200                                                 # Explorer's zip handling chokes near 1 GB
+PART_MB = 50                                                  # Explorer's zip handling chokes near 1 GB
 
 
 def zip_set(name: str, folder: Path, manifest: Path, extra: tuple[Path, ...] = (D / "pdf_safety.csv",)) -> list[str]:
     """Zip a set as self-contained parts of at most PART_MB (not a split archive: each part opens on its own).
-    Every part carries the full manifest. Returns the part filenames."""
+    Every part carries the full manifest. Entries sit under a folder named for the set, so every zip in the
+    release can be extracted into one directory without clashes. Returns the part filenames."""
     keep = (lambda p: p.is_file() and p.name not in ("LICENSE", "files.json")) if folder.name == "reference" \
         else (lambda p: p.suffix.lower() == ".pdf")             # pypdf's tests also fetch the PNG/TIFF they compare to
     pdfs = sorted(p for p in folder.rglob("*") if keep(p)
@@ -66,16 +67,16 @@ def zip_set(name: str, folder: Path, manifest: Path, extra: tuple[Path, ...] = (
         parts[-1].append(p)
         size += p.stat().st_size
     stem = name.removesuffix(".zip")
-    names = [name] if len(parts) == 1 else [f"{stem}_part{i}of{len(parts)}.zip" for i in range(1, len(parts) + 1)]
+    names = [name] if len(parts) == 1 else [f"{stem}_part{i:02}of{len(parts):02}.zip" for i in range(1, len(parts) + 1)]
     for n, part in zip(names, parts):
         with zipfile.ZipFile(REL / n, "w", zipfile.ZIP_STORED) as z:
             for p in part:
-                z.write(p, f"pdfs/{p.relative_to(folder).as_posix()}")
+                z.write(p, f"{stem}/pdfs/{p.relative_to(folder).as_posix()}")
             for lic in folder.rglob("LICENSE"):                 # upstream licences travel with their files
-                z.write(lic, f"pdfs/{lic.relative_to(folder).as_posix()}")
-            z.write(manifest, "manifest.csv")
+                z.write(lic, f"{stem}/pdfs/{lic.relative_to(folder).as_posix()}")
+            z.write(manifest, f"{stem}/manifest.csv")
             for e in extra:
-                z.write(e, e.name.replace("pdf_", ""))
+                z.write(e, f"{stem}/{e.name.replace('pdf_', '')}")
         print(f"{n}: {len(part)} PDFs, {(REL / n).stat().st_size / 1e6:.0f} MB")
     return names
 
@@ -85,17 +86,17 @@ def run(*cmd: str, cwd: Path | None = None) -> None:
     subprocess.run(cmd, check=True, cwd=cwd)
 
 
-def release_v2() -> None:
-    """Re-zip all three sets in parts and publish them as release v2 (the README is edited in the repo itself)."""
+def release_parts(tag: str = "v3") -> None:
+    """Re-zip all three sets in parts and publish them as one release (the README is edited in the repo itself)."""
     shutil.rmtree(REL, ignore_errors=True)
     REL.mkdir()
     names = [n for s in SETS for n in zip_set(*s)]
     names += zip_set("reference_pdfs_pypdf_docling.zip", D / "reference", D / "reference.csv", extra=())
-    run("gh", "release", "create", "v2", *[str(REL / n) for n in names], "--repo", REPO, "--latest",
-        "--title", "Council test PDFs v2: split into parts of ≤200 MB, plus pypdf and docling's test PDFs",
-        "--notes", "Same council PDFs as v1, re-zipped into self-contained parts of at most 200 MB (each opens on "
-                   "its own). New: reference_pdfs_pypdf_docling.zip, the PDFs pypdf and docling test themselves "
-                   "against. See the README.")
+    run("gh", "release", "create", tag, *[str(REL / n) for n in names], "--repo", REPO, "--latest",
+        "--title", f"Council test PDFs {tag}: every set in parts of ≤{PART_MB} MB",
+        "--notes", f"All three sets (council 1–10 MB, council 100 KB–1 MB, pypdf/docling reference) as "
+                   f"self-contained zips of at most {PART_MB} MB. Download every asset and extract them all into "
+                   "one folder: each set lands in its own subfolder. See the README.")
 
 
 def main() -> None:
@@ -116,4 +117,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     import sys
-    release_v2() if "--v2" in sys.argv else main()
+    release_parts() if "--parts" in sys.argv else main()
