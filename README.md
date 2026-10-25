@@ -74,7 +74,7 @@ councils. Median 0.35 MB, median 9 pages. 2 have little or no text layer; all 50
 ### pypdf and docling reference set (142 files)
 
 The files each project's own test suite runs against, fetched 25 October 2026 from `main`. They're in
-`pdfs/<source>/…`, and [`manifests/reference.csv`](manifests/reference.csv) lists each file's upstream URL,
+`reference_pdfs_pypdf_docling/pdfs/<source>/…`, and [`manifests/reference.csv`](manifests/reference.csv) lists each file's upstream URL,
 sha256 and the same pypdf properties as the council manifests.
 
 | Folder | Files | Size | Source | Licence |
